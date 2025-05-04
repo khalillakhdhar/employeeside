@@ -1,0 +1,67 @@
+<!-- 🔓 User Info -->
+<div class="alert alert-info mb-4">
+  <strong>Connecté :</strong> {{ currentUser?.nom_complet }}<br>
+  <strong>Email :</strong> {{ currentUser?.email }}<br>
+  <strong>Matricule :</strong> {{ currentUser?.matriculeWindows }}<br>
+  <strong>Service :</strong> {{ currentUser?.service?.nom }}
+</div>
+
+<div class="row mb-4">
+  <!-- MATERIEL -->
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Matières</h5>
+        <form #matiereForm="ngForm" (ngSubmit)="addMatiere(matiereForm)" class="d-flex gap-2">
+          <input class="form-control" name="nom" [(ngModel)]="newMatiere.nom" placeholder="Nom" required>
+          <input class="form-control" name="quantite" [(ngModel)]="newMatiere.quantite" type="number" placeholder="Qte" required>
+          <input class="form-control" name="dateAjout" [(ngModel)]="newMatiere.dateAjout" type="date" required>
+          <button class="btn btn-success" type="submit">+</button>
+        </form>
+      </div>
+      <div class="card-body table-responsive p-0">
+        <table class="table table-sm table-striped mb-0">
+          <thead>
+            <tr><th>Nom</th><th>Qte</th><th>Date</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let m of matieres">
+              <td>{{ m.nom }}</td>
+              <td>{{ m.quantite }}</td>
+              <td>{{ m.dateAjout }}</td>
+              <td><button class="btn btn-sm btn-danger" (click)="deleteMatiere(m.id)">x</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPE FOURNITURE -->
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Types de Fourniture</h5>
+        <form #typeForm="ngForm" (ngSubmit)="addType(typeForm)" class="d-flex gap-2">
+          <input class="form-control" name="nom" [(ngModel)]="newType.nom" placeholder="Nom" required>
+          <input class="form-control" name="qte" [(ngModel)]="newType.qte" placeholder="Qte" required>
+          <button class="btn btn-success" type="submit">+</button>
+        </form>
+      </div>
+      <div class="card-body table-responsive p-0">
+        <table class="table table-sm table-striped mb-0">
+          <thead>
+            <tr><th>Nom</th><th>Qte</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let t of typesFourniture">
+              <td>{{ t.nom }}</td>
+              <td>{{ t.qte }}</td>
+              <td><button class="btn btn-sm btn-danger" (click)="deleteType(t.id)">x</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
