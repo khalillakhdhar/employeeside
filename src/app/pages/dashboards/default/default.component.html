@@ -29,7 +29,6 @@
               <td>{{ m.nom }}</td>
               <td>{{ m.quantite }}</td>
               <td>{{ m.dateAjout }}</td>
-              <td><button class="btn btn-sm btn-danger" (click)="deleteMatiere(m.id)">x</button></td>
             </tr>
           </tbody>
         </table>
@@ -51,13 +50,12 @@
       <div class="card-body table-responsive p-0">
         <table class="table table-sm table-striped mb-0">
           <thead>
-            <tr><th>Nom</th><th>Qte</th><th></th></tr>
+            <tr><th>Nom</th><th>Qte</th></tr>
           </thead>
           <tbody>
             <tr *ngFor="let t of typesFourniture">
               <td>{{ t.nom }}</td>
               <td>{{ t.qte }}</td>
-              <td><button class="btn btn-sm btn-danger" (click)="deleteType(t.id)">x</button></td>
             </tr>
           </tbody>
         </table>

@@ -247,18 +247,20 @@ export const MENU: MenuItem[] = [
         label: 'MENUITEMS.PROJECTS.TEXT',
         icon: 'bx-briefcase-alt-2',
         subItems: [
-            {
+        /*    {
                 id: 41,
                 label: 'MENUITEMS.PROJECTS.LIST.GRID',
                 link: '/projects/grid',
                 parentId: 40
             },
+
             {
                 id: 42,
                 label: 'MENUITEMS.PROJECTS.LIST.PROJECTLIST',
                 link: '/projects/list',
                 parentId: 40
             },
+            */
             {
                 id: 43,
                 label: 'MENUITEMS.PROJECTS.LIST.OVERVIEW',
@@ -304,7 +306,7 @@ export const MENU: MenuItem[] = [
         label: 'MENUITEMS.CONTACTS.TEXT',
         icon: 'bxs-user-detail',
         subItems: [
-            {
+         /*   {
                 id: 50,
                 label: 'MENUITEMS.CONTACTS.LIST.USERGRID',
                 link: '/contacts/grid',
@@ -316,6 +318,7 @@ export const MENU: MenuItem[] = [
                 link: '/contacts/list',
                 parentId: 49
             },
+            */
             {
                 id: 52,
                 label: 'MENUITEMS.CONTACTS.LIST.PROFILE',

@@ -16,7 +16,6 @@
                   <th>Matière</th>
                   <th>Type Fourniture</th>
                   <th>État</th>
-                  <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -33,15 +32,7 @@
                       'bg-danger': f.etats === 'Refusée'
                     }">{{ f.etats }}</span>
                   </td>
-                  <td>
-                    <button *ngIf="f.etats === 'En attente'" class="btn btn-success btn-sm me-2" (click)="accepter(f)">
-                      Accepter
-                    </button>
-                    <button *ngIf="f.etats === 'En attente'" class="btn btn-danger btn-sm" (click)="refuser(f)">
-                      Refuser
-                    </button>
-                    <span *ngIf="f.etats !== 'En attente'" class="text-muted">Aucune action</span>
-                  </td>
+              
                 </tr>
               </tbody>
             </table>

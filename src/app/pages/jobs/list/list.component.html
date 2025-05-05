@@ -34,10 +34,7 @@
                   <td>{{ formation.type }}</td>
                   <td>{{ formation.etat }}</td>
                   <td>
-                    <button class="btn btn-info btn-sm" (click)="openModal(formationModal, formation)">modifier</button>
-                    <button class="btn btn-danger btn-sm" (click)="deleteFormation(formation.id)">supprimer</button>
-                    <button class="btn btn-success btn-sm" (click)="acceptFormation(formation.id)">Accepter</button>
-                    <button class="btn btn-warning btn-sm" (click)="rejectFormation(formation.id)">Rejeter</button>
+                  
                     <button class="btn btn-primary btn-sm" (click)="selectFormation(formation)">Consulter</button>
                   </td>
                 </tr>
@@ -88,7 +85,7 @@
               </li>
             </ul>
 
-            <!-- Formulaire ajout de cours -->
+            <!-- Formulaire ajout de cours 
             <form (ngSubmit)="uploadCours()" #coursForm="ngForm">
               <div class="row align-items-end">
                 <div class="col-md-4">
@@ -103,7 +100,7 @@
                   <button type="submit" class="btn btn-success">Ajouter le cours</button>
                 </div>
               </div>
-            </form>
+            </form>-->
           </div>
 
         </div>
